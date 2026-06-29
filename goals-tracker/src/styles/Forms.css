@@ -1,0 +1,160 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form__opcional {
+  font-weight: 400;
+  text-transform: none;
+  color: var(--color-ink-faint);
+  letter-spacing: 0;
+}
+
+.form__input,
+.form__textarea {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  padding: 11px 13px;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  transition: border-color 0.15s var(--ease-out), box-shadow 0.15s var(--ease-out);
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+  background: var(--color-surface);
+}
+
+.form__textarea {
+  resize: vertical;
+  min-height: 64px;
+  font-family: var(--font-body);
+}
+
+.form__input--money {
+  font-family: var(--font-mono);
+}
+
+.form__erro {
+  font-size: 0.78rem;
+  color: var(--color-expense);
+}
+
+.form__grupo-valor {
+  position: relative;
+}
+
+.form__prefixo {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.form__grupo-valor .form__input {
+  padding-left: 28px;
+}
+
+.form__acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.botao {
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: transform 0.12s var(--ease-out), background 0.15s var(--ease-out),
+    border-color 0.15s var(--ease-out), color 0.15s var(--ease-out);
+}
+
+.botao:active {
+  transform: translateY(1px);
+}
+
+.botao--secundario {
+  background: transparent;
+  border-color: var(--color-line-strong);
+  color: var(--color-ink-soft);
+}
+
+.botao--secundario:hover {
+  background: var(--color-surface-alt);
+  color: var(--color-ink);
+}
+
+.botao--primario {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+
+.botao--primario:hover {
+  background: var(--color-accent-strong);
+}
+
+.botao--perigo {
+  background: var(--color-expense);
+  color: #fff5f3;
+}
+
+.botao--perigo:hover {
+  background: #893a31;
+}
+
+.botao--receita {
+  background: var(--color-income-soft);
+  color: var(--color-income);
+}
+
+.botao--receita:hover {
+  background: var(--color-income);
+  color: #fff;
+}
+
+.botao--despesa {
+  background: var(--color-expense-soft);
+  color: var(--color-expense);
+}
+
+.botao--despesa:hover {
+  background: var(--color-expense);
+  color: #fff;
+}
+
+.confirmar__texto {
+  color: var(--color-ink-soft);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.confirmar__destaque {
+  color: var(--color-ink);
+  font-weight: 600;
+}

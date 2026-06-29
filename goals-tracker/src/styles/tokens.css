@@ -1,0 +1,66 @@
+/* ============================================================
+   DESIGN TOKENS
+   Inspiração: livro de poupança / caderneta bancária (ledger).
+   Papel quente + tinta verde-floresta + acabamento a latão (gold).
+   ============================================================ */
+
+:root {
+  /* Cor — superfícies */
+  --color-bg: #f6f1e6;
+  --color-bg-soft: #efe8d8;
+  --color-surface: #fffdf8;
+  --color-surface-alt: #f0ead9;
+
+  /* Cor — tinta / texto */
+  --color-ink: #1f3329;
+  --color-ink-soft: #51635a;
+  --color-ink-faint: #8a9690;
+
+  /* Cor — linhas */
+  --color-line: #ddd3b8;
+  --color-line-strong: #c7bb98;
+
+  /* Cor — acento principal (latão / objetivo) */
+  --color-accent: #b07f23;
+  --color-accent-strong: #8f661a;
+  --color-accent-soft: #ecdcb3;
+
+  /* Cor — receitas / despesas */
+  --color-income: #2e6f4e;
+  --color-income-soft: #dceadf;
+  --color-expense: #a1443a;
+  --color-expense-soft: #f4dfdb;
+
+  /* Sombra */
+  --shadow-card: 0 1px 2px rgba(31, 51, 41, 0.04), 0 8px 24px -8px rgba(31, 51, 41, 0.12);
+  --shadow-modal: 0 24px 64px -12px rgba(20, 30, 25, 0.35);
+
+  /* Tipografia */
+  --font-display: 'Fraunces', 'Iowan Old Style', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+
+  /* Raios */
+  --radius-sm: 7px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Transições */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Mantemos o tema claro de propósito — a estética de "papel" é
+     o conceito central do design, mas respeitamos o utilizador
+     que pediu redução de movimento abaixo. */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

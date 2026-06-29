@@ -1,0 +1,71 @@
+.progresso {
+  position: relative;
+  padding-top: 24px;
+  margin: 4px 0 8px;
+}
+
+.progresso__pista {
+  position: relative;
+  height: 11px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-line);
+  overflow: hidden;
+}
+
+.progresso__tracos {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.progresso__traco {
+  width: 1px;
+  height: 100%;
+  background: rgba(31, 51, 41, 0.1);
+}
+
+.progresso__enchimento {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--color-income) 0%, var(--color-accent) 100%);
+  transition: width 0.7s var(--ease-out);
+  position: relative;
+}
+
+.progresso__enchimento--completo {
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-strong) 100%);
+}
+
+.progresso__selo {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  background: var(--color-ink);
+  color: var(--color-bg);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 3px 7px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: left 0.7s var(--ease-out);
+  z-index: 3;
+}
+
+.progresso__selo::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: var(--color-ink);
+  transform: translateX(-50%) rotate(45deg);
+  border-radius: 1px;
+}
