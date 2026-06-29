@@ -138,7 +138,7 @@ export default function App() {
             + Novo objetivo
           </button>
           <button type="button" className="botao botao--secundario" onClick={logout}>
-            🚪 Sair
+            Terminar sessão
           </button>
         </div>
       </header>
