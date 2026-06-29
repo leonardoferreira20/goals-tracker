@@ -148,6 +148,11 @@
   color: #fff;
 }
 
+.botao--bloco {
+  width: 100%;
+  text-align: center;
+}
+
 .confirmar__texto {
   color: var(--color-ink-soft);
   line-height: 1.55;

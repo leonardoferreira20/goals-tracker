@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { auth } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import "../styles/Forms.css";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -23,17 +24,30 @@ export default function Register() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Email</label>
-
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+    <form className="form" onSubmit={handleSubmit} noValidate>
+      <div className="form__campo">
+        <label className="form__label" htmlFor="register-email">
+          Email
+        </label>
+        <input
+          id="register-email"
+          className="form__input"
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          autoFocus
+        />
       </div>
 
-      <div>
-        <label>Palavra-passe</label>
-
+      <div className="form__campo">
+        <label className="form__label" htmlFor="register-password">
+          Palavra-passe
+        </label>
         <input
+          id="register-password"
+          className="form__input"
           type="password"
           placeholder="Palavra-passe"
           value={password}
@@ -42,10 +56,13 @@ export default function Register() {
         />
       </div>
 
-      <div>
-        <label>Confirmar palavra-passe</label>
-
+      <div className="form__campo">
+        <label className="form__label" htmlFor="register-confirm-password">
+          Confirmar palavra-passe
+        </label>
         <input
+          id="register-confirm-password"
+          className="form__input"
           type="password"
           placeholder="Confirmar palavra-passe"
           value={confirmPassword}
@@ -54,7 +71,9 @@ export default function Register() {
         />
       </div>
 
-      <button type="submit">Criar conta</button>
+      <button type="submit" className="botao botao--primario botao--bloco">
+        Criar conta
+      </button>
     </form>
   );
 }

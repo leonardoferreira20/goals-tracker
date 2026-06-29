@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Login from "./Login";
 import Register from "./Register";
+import "../styles/Auth.css";
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
@@ -17,9 +18,9 @@ export default function AuthPage() {
         {isLogin ? (
           <>
             <Login />
-            <p>
+            <p className="auth__alternar">
               Ainda não tens conta?{" "}
-              <button type="button" onClick={() => setIsLogin(false)}>
+              <button type="button" className="auth__link" onClick={() => setIsLogin(false)}>
                 Criar conta
               </button>
             </p>
@@ -27,9 +28,9 @@ export default function AuthPage() {
         ) : (
           <>
             <Register />
-            <p>
+            <p className="auth__alternar">
               Já tens conta?{" "}
-              <button type="button" onClick={() => setIsLogin(true)}>
+              <button type="button" className="auth__link" onClick={() => setIsLogin(true)}>
                 Entrar
               </button>
             </p>

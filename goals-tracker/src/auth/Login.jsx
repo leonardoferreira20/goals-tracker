@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import "../styles/Forms.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -17,17 +18,30 @@ export default function Login() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Email</label>
-
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+    <form className="form" onSubmit={handleSubmit} noValidate>
+      <div className="form__campo">
+        <label className="form__label" htmlFor="login-email">
+          Email
+        </label>
+        <input
+          id="login-email"
+          className="form__input"
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          autoFocus
+        />
       </div>
 
-      <div>
-        <label>Palavra-passe</label>
-
+      <div className="form__campo">
+        <label className="form__label" htmlFor="login-password">
+          Palavra-passe
+        </label>
         <input
+          id="login-password"
+          className="form__input"
           type="password"
           placeholder="Palavra-passe"
           value={password}
@@ -36,7 +50,9 @@ export default function Login() {
         />
       </div>
 
-      <button type="submit">Entrar</button>
+      <button type="submit" className="botao botao--primario botao--bloco">
+        Entrar
+      </button>
     </form>
   );
 }
